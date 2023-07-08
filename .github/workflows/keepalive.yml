@@ -1,15 +1,10 @@
-name: Github Action with a cronjob trigger
+name: 保持活动状态
 on:
   schedule:
     - cron: "0 0 * * *"
 
 jobs:
-  cronjob-based-github-action:
-    name: Cronjob based github action
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      # - step1
-      # - step 2
-      # - step n, use it as the last step
-      - uses: gautamkrishnar/keepalive-workflow@v1 # using the workflow with default settings
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v3
+    - uses: gautamkrishnar/keepalive-workflow@v1
