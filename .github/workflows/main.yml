@@ -10,11 +10,12 @@ env:
   TOKEN: ${{ secrets.TOKEN }}
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 16.x
-    - name: 执行脚本
-      run: node index.js
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: 执行脚本
+        run: node index.js
