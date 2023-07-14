@@ -18,4 +18,4 @@ jobs:
         with:
           node-version: 16.x
       - name: 执行脚本
-        run: node index.js
+        run: node index.js orchard.js yqds.js
