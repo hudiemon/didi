@@ -18,4 +18,15 @@ jobs:
         with:
           node-version: 16.x
       - name: 执行脚本
-        run: node index.js && node orchard.js && node yqds.js
+        run: |
+          # Split the secrets string into an array based on a semicolon
+          IFS=';' read -ra secretsArray <<< "${{ secrets.TOKEN }}"
+
+          # Loop through the elements of the array
+          for secretValue in "${secretsArray[@]}"; do
+            echo "Secret Value: $secretValue"
+            # You can use the $secretValue in your script
+          done
+
+          # Your existing script, where you can still use ${{ secrets.TOKEN }}
+          node index.js && node orchard.js && node yqds.js
