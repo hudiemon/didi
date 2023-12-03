@@ -46,4 +46,5 @@ localStorage.getItem('didih5_trinity_login_ticket_role_121230').replace(/"/g, ''
 ```
 🫵滴滴果园必须手动完成新手任务
 # env
-TOKEN=你的token
+TOKENS=你的token;
+多个TOKEN可用;分割
