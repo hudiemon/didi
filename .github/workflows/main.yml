@@ -7,7 +7,7 @@ on:
 
 env:
   TZ: "Asia/Shanghai"
-  TOKEN: ${{ secrets.TOKEN }}
+  TOKENS: ${{ secrets.TOKENS }}
 
 jobs:
   main:
@@ -18,4 +18,4 @@ jobs:
         with:
           node-version: 16.x
       - name: 执行脚本
-        run: node index.js && node orchard.js && node yqds.js
+        run: node index.js && node yqds.js
